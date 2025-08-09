@@ -1,0 +1,13 @@
+@-moz-document url-prefix("https://docs.google.com/spreadsheets") {
+.appsElementsSideSheetHeader{
+    padding:0;
+    margin:0;
+}
+.appsElementsSideSheetContent{
+    padding:0
+}
+.docsWizSidebarSidebarContainer{
+    margin:0
+}
+
+}
