@@ -1,3 +1,8 @@
+/* ==UserStyle==
+@name         Github Catppuccin
+@license      MIT
+==/UserStyle== */
+
 @-moz-document url-prefix("https://docs.google.com/spreadsheets") {
 .appsElementsSideSheetHeader{
     padding:0;
