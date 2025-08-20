@@ -1,20 +1,63 @@
 /* ==UserStyle==
 @name         Google Sheets
 @namespace    com.gmail.svischuk.googleSheetCSS
-@version      1.1
+@version      1.2
 @license      MIT
 ==/UserStyle== */
-
 @-moz-document url-prefix("https://docs.google.com/spreadsheets") {
-.appsElementsSideSheetHeader{
-    padding:0;
-    margin:0;
-}
-.appsElementsSideSheetContent{
-    padding:0
-}
-.docsWizSidebarSidebarContainer{
-    margin:0
-}
-
+    .appsElementsSideSheetHeader {
+        padding: 0;
+        margin: 0;
+    }
+    .appsElementsSideSheetContent {
+        padding: 0
+    }
+    .docsWizSidebarSidebarContainer {
+        margin: 0
+    }
+    .docs-gm .docs-sheet-tab-color {
+        top: 0;
+        position: absolute;
+        height: inherit;
+        z-index: 10;
+    }
+    .goog-inline-block.docs-sheet-tab-caption {
+        margin: 10px;
+    }
+    .docs-sheet-container.goog-inline-block {
+        height: fit-content;
+    }
+    .docs-sheet-container-bar.goog-toolbar.goog-inline-block {
+        white-space: unset;
+    }
+    #grid-bottom-bar,
+    .docs-sheet-container-bar.goog-toolbar.goog-inline-block,
+    .docs-sheet-outer-container,
+    .docs-sheet-outer-container > *,
+    .docs-sheet-outer-container * {
+        width: auto !important;
+        height: auto !important;
+    }
+    .goog-inline-block.docs-sheet-tab.docs-material,
+    .goog-inline-block.docs-sheet-tab-caption {
+        padding: 0 1px;
+        margin: 0 1px;
+    }
+    .goog-inline-block.docs-sheet-tab-caption {
+        background: #525252;
+        z-index: -10
+    }
+    .docs-icon.goog-inline-block.docs-sheet-lock-container {
+        margin: 0;
+    }
+    .docs-sheet-tab-name {
+        position: relative;
+        z-index: 100;
+        color: white !important;
+    }
+    .docs-grille-gm3 .docs-sheet-active-tab .docs-sheet-tab-name,
+    .docs-grille-gm3 .docs-sheet-active-tab:focus .docs-sheet-tab-name {
+        color: #ffcdba!important;
+        font-weight: unset;
+    }
 }
