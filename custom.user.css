@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Google Sheets
 @namespace    com.gmail.svischuk.googleSheetCSS
-@version      1.7
+@version      1.8
 @license      MIT
 ==/UserStyle== */
 @-moz-document url-prefix("https://docs.google.com/spreadsheets") {
@@ -59,7 +59,7 @@
         font-weight: unset;
     }
     .goog-inline-block.docs-sheet-tab.docs-material {
-        width: auto !important;
+        width: 100% !important;
         height: auto !important;
 
         display: table-cell;
@@ -78,7 +78,7 @@
     #grid-bottom-bar,
     .docs-sheet-outer-container > div,
     .docs-sheet-container.goog-inline-block,
-    .docs-sheet-tab-color {
+    .docs-sheet-tab-color{
         height: auto !important;
         width: 100% !important;
     }
@@ -93,5 +93,8 @@
     }
     .docs-sheet-status-container-avs {
         width: 190px
+    }
+    .docs-sheet-tab-name {
+        background: linear-gradient(90deg, #f9fbfd, transparent);
     }
 }
