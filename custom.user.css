@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Google Sheets
 @namespace    com.gmail.svischuk.googleSheetCSS
-@version      1.6
+@version      1.7
 @license      MIT
 ==/UserStyle== */
 @-moz-document url-prefix("https://docs.google.com/spreadsheets") {
@@ -22,7 +22,7 @@
         z-index: 10;
     }
     .goog-inline-block.docs-sheet-tab-caption {
-        margin: 10px;
+        margin: 0px;
     }
     .docs-sheet-container.goog-inline-block {
         height: fit-content;
@@ -40,25 +40,58 @@
     }
     .goog-inline-block.docs-sheet-tab.docs-material,
     .goog-inline-block.docs-sheet-tab-caption {
-        padding: 0 1px;
-        margin: 0 1px;
-    }
-    .goog-inline-block.docs-sheet-tab-caption {
-        background: #525252;
-        z-index: -10
-    }
-    .docs-icon.goog-inline-block.docs-sheet-lock-container {
         margin: 0;
+        border: none;
+        padding: 0;
     }
-.docs-sheet-tab-name {
-/*     text-shadow: 0px 0px 15px black,0px 0px 10px black,0px 0px 5px black; */
-    position: relative;
-    z-index: 100;
-    color: black !important;
-}
+
+    .docs-sheet-tab-name {
+        position: relative;
+        z-index: 100;
+        color: black !important;
+        padding: 0 0 0 5px;
+        /*         margin: 5px; */
+    }
+
     .docs-grille-gm3 .docs-sheet-active-tab .docs-sheet-tab-name,
     .docs-grille-gm3 .docs-sheet-active-tab:focus .docs-sheet-tab-name {
         color: #f00!important;
         font-weight: unset;
+    }
+    .goog-inline-block.docs-sheet-tab.docs-material {
+        width: auto !important;
+        height: auto !important;
+
+        display: table-cell;
+        overflow: clip;
+    }
+
+    .goog-inline-block.docs-sheet-tab.docs-material * {
+        width: inherit !important;
+    }
+    .docs-sheet-container-bar.goog-toolbar.goog-inline-block {
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 2px;
+    }
+    #grid-bottom-bar,
+    .docs-sheet-outer-container > div,
+    .docs-sheet-container.goog-inline-block,
+    .docs-sheet-tab-color {
+        height: auto !important;
+        width: 100% !important;
+    }
+    #docs-editor > div:nth-child(11) {
+        position: sticky;
+        bottom: 0;
+    }
+    .docs-icon.goog-inline-block.docs-sheet-lock-container,
+    .docs-icon.goog-inline-block.docs-sheet-timeline-icon-container,
+    .docs-companion-app-switcher-container.docs-material.docs-companion-app-switcher-container-collapsed {
+        display: none
+    }
+    .docs-sheet-status-container-avs {
+        width: 190px
     }
 }
