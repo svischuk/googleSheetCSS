@@ -50,11 +50,12 @@
     .docs-icon.goog-inline-block.docs-sheet-lock-container {
         margin: 0;
     }
-    .docs-sheet-tab-name {
-        position: relative;
-        z-index: 100;
-        color: white !important;
-    }
+.docs-sheet-tab-name {
+    text-shadow: 0px 0px 15px black,0px 0px 10px black,0px 0px 5px black;
+    position: relative;
+    z-index: 100;
+    color: white !important;
+}
     .docs-grille-gm3 .docs-sheet-active-tab .docs-sheet-tab-name,
     .docs-grille-gm3 .docs-sheet-active-tab:focus .docs-sheet-tab-name {
         color: #f00!important;
