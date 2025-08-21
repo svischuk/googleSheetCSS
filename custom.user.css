@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Google Sheets
 @namespace    com.gmail.svischuk.googleSheetCSS
-@version      1.9
+@version      2.0
 @license      MIT
 ==/UserStyle== */
 @-moz-document url-prefix("https://docs.google.com/spreadsheets") {
@@ -48,17 +48,16 @@
     .docs-sheet-tab-name {
         position: relative;
         z-index: 100;
-        color: black !important;
+        color: #000 !important;
         padding: 0 0 0 5px !important;;
         margin: 0 !important;
-        border:0 !important;
-        /*         margin: 5px; */
+        border: 0 !important;
     }
 
     .docs-grille-gm3 .docs-sheet-active-tab .docs-sheet-tab-name,
     .docs-grille-gm3 .docs-sheet-active-tab:focus .docs-sheet-tab-name {
-        color: #f00!important;
         font-weight: unset;
+        filter: invert(1);
     }
     .goog-inline-block.docs-sheet-tab.docs-material {
         width: 100% !important;
@@ -66,6 +65,7 @@
 
         display: table-cell;
         overflow: clip;
+        border-radius: 0 15px 15px 0;
     }
 
     .goog-inline-block.docs-sheet-tab.docs-material * {
