@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Google Sheets
 @namespace    com.gmail.svischuk.googleSheetCSS
-@version      1.8
+@version      1.9
 @license      MIT
 ==/UserStyle== */
 @-moz-document url-prefix("https://docs.google.com/spreadsheets") {
@@ -49,7 +49,9 @@
         position: relative;
         z-index: 100;
         color: black !important;
-        padding: 0 0 0 5px;
+        padding: 0 0 0 5px !important;;
+        margin: 0 !important;
+        border:0 !important;
         /*         margin: 5px; */
     }
 
