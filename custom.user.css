@@ -1,102 +1,101 @@
 /* ==UserStyle==
-@name         Google Sheets
+@name         Google Sheets Optimized
 @namespace    com.gmail.svischuk.googleSheetCSS
-@version      2.0
+@version      2.3
 @license      MIT
 ==/UserStyle== */
 @-moz-document url-prefix("https://docs.google.com/spreadsheets") {
-    .appsElementsSideSheetHeader {
-        padding: 0;
-        margin: 0;
+    :root {
+        --row-height: 19px;
+        --active-tab-gradient: linear-gradient(90deg, #000, transparent);
+        --tab-gradient: linear-gradient(90deg, #f9fbfd, transparent);
+        --tab-hover-gradient: linear-gradient(90deg, #bfbfbf, transparent);
+        --text-color: #000;
+        --active-text-color: #fff;
+        --quick-sum-bg: #c4eed0;
+        --quick-sum-border: #89aa92;
+        --quick-sum-border-width: 1px;
+        --quick-sum-border-style: solid;
     }
-    .appsElementsSideSheetContent {
-        padding: 0
-    }
-    .docsWizSidebarSidebarContainer {
-        margin: 0
-    }
-    .docs-gm .docs-sheet-tab-color {
-        top: 0;
-        position: absolute;
-        height: inherit;
-        z-index: 10;
-    }
-    .goog-inline-block.docs-sheet-tab-caption {
-        margin: 0px;
-    }
-    .docs-sheet-container.goog-inline-block {
-        height: fit-content;
-    }
+
+    /* Tab container improvements */
     .docs-sheet-container-bar.goog-toolbar.goog-inline-block {
-        white-space: unset;
-    }
-    #grid-bottom-bar,
-    .docs-sheet-container-bar.goog-toolbar.goog-inline-block,
-    .docs-sheet-outer-container,
-    .docs-sheet-outer-container > *,
-    .docs-sheet-outer-container * {
-        width: auto !important;
-        height: auto !important;
-    }
-    .goog-inline-block.docs-sheet-tab.docs-material,
-    .goog-inline-block.docs-sheet-tab-caption {
-        margin: 0;
-        border: none;
-        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 128px);
+        gap: 2px;
+        min-height: 40px;
     }
 
-    .docs-sheet-tab-name {
-        position: relative;
-        z-index: 100;
-        color: #000 !important;
-        padding: 0 0 0 5px !important;;
-        margin: 0 !important;
-        border: 0 !important;
-    }
-
+    /* Active tab styling */
     .docs-grille-gm3 .docs-sheet-active-tab .docs-sheet-tab-name,
     .docs-grille-gm3 .docs-sheet-active-tab:focus .docs-sheet-tab-name {
         font-weight: unset;
-        filter: invert(1);
-    }
-    .goog-inline-block.docs-sheet-tab.docs-material {
-        width: 100% !important;
-        height: auto !important;
-
-        display: table-cell;
-        overflow: clip;
-        border-radius: 0 15px 15px 0;
+        background: var(--active-tab-gradient);
+        color: var(--active-text-color) !important;
     }
 
-    .goog-inline-block.docs-sheet-tab.docs-material * {
-        width: inherit !important;
-    }
-    .docs-sheet-container-bar.goog-toolbar.goog-inline-block {
-
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-        gap: 2px;
-    }
+    /* Structural elements */
     #grid-bottom-bar,
-    .docs-sheet-outer-container > div,
-    .docs-sheet-container.goog-inline-block,
-    .docs-sheet-tab-color{
-        height: auto !important;
+    .docs-sheet-outer-container,
+    .docs-sheet-outer-container * {
         width: 100% !important;
+        height: auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
-    #docs-editor > div:nth-child(11) {
-        position: sticky;
-        bottom: 0;
+
+    .docs-sheet-status-container-avs * {
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
     }
+
+    /* Color tab positioning */
+    .docs-gm .docs-sheet-tab-color {
+        top: 0;
+        position: absolute;
+        z-index: -10;
+    }
+
+    .docs-sheet-tab-name {
+        color: var(--text-color) !important;
+        padding: 1px 0 0 5px !important;
+        background: var(--tab-gradient);
+    }
+
     .docs-icon.goog-inline-block.docs-sheet-lock-container,
     .docs-icon.goog-inline-block.docs-sheet-timeline-icon-container,
     .docs-companion-app-switcher-container.docs-material.docs-companion-app-switcher-container-collapsed {
-        display: none
+        display: none;
     }
+
+    .goog-inline-block.docs-sheet-tab.docs-material {
+        display: table-cell;
+        overflow: clip;
+        border-radius: 0 15px 15px 0;
+        border: none;
+        max-height: var(--row-height);
+    }
+
     .docs-sheet-status-container-avs {
-        width: 190px
+        position: absolute;
+        top: -53px;
+        right: 15px;
     }
-    .docs-sheet-tab-name {
-        background: linear-gradient(90deg, #f9fbfd, transparent);
+
+    .goog-inline-block.goog-flat-menu-button.jfk-select,
+    .waffle-quicksum-container {
+        background: var(--quick-sum-bg);
+        border: var(--quick-sum-border-style) var(--quick-sum-border-width) var(--quick-sum-border) !important;
+        border-radius: 100px;
+        box-sizing: content-box;
+        padding: 0 10px!important;
+    }
+
+    .waffle-quicksum-container {
+        padding-right: 30px!important;
+    }
+    .docs-sheet-tab-name:hover {
+        background: var(--tab-hover-gradient);
     }
 }
