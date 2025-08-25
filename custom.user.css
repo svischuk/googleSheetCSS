@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Google Sheets Optimized
 @namespace    com.gmail.svischuk.googleSheetCSS
-@version      2.8
+@version      2.9
 @license      MIT
 ==/UserStyle== */
 @-moz-document url-prefix("https://docs.google.com/spreadsheets") {
@@ -36,7 +36,7 @@
 .javascriptMaterialdesignGm3WizCardOutlined-card.appsElementsSideSheetRoot.maestroApplicationSidebarSidesheetContainer{
     background:none;
     }
-    #ucc-1{
+    .appsElementsSideSheetTitle{
         text-align: center;
     }
     /* Structural elements */
