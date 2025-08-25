@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Google Sheets Optimized
 @namespace    com.gmail.svischuk.googleSheetCSS
-@version      2.5
+@version      2.6
 @license      MIT
 ==/UserStyle== */
 @-moz-document url-prefix("https://docs.google.com/spreadsheets") {
@@ -43,7 +43,9 @@
         padding: 0 !important;
         margin: 0 !important;
     }
-
+    #docs-wiz-sidebar-placeholder,
+    .appsElementsSideSheetHeader,
+.appsElementsSideSheetContent,
     .docs-sheet-status-container-avs * {
         padding: 0 !important;
         margin: 0 !important;
