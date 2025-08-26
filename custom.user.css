@@ -1,15 +1,16 @@
 /* ==UserStyle==
 @name         Google Sheets Optimized
 @namespace    com.gmail.svischuk.googleSheetCSS
-@version      2.91
+@version      2.92
 @license      MIT
 ==/UserStyle== */
 @-moz-document url-prefix("https://docs.google.com/spreadsheets") {
     :root {
         --row-height: 19px;
-        --active-tab-gradient: linear-gradient(90deg, #000, transparent);
-        --tab-gradient: linear-gradient(90deg, #f9fbfd, transparent);
-        --tab-hover-gradient: linear-gradient(90deg, #878787, transparent);
+        --active-tab-gradient: linear-gradient(90deg, #000, #000000A8 70%,transparent);
+        --tab-gradient: linear-gradient(90deg, #f9fbfd 0%,#F9FBFDA8 70%, transparent);
+        --tab-hover-gradient: linear-gradient(90deg, #D1D1D1,0%,#D1D1D1A8 70%, transparent);
+        --tab-hover-gradient-dark: linear-gradient(90deg, #2C2C2C,0%,#2C2C2CA8 70%, transparent);
         --text-color: #000;
         --active-text-color: #fff;
         --quick-sum-bg: #c4eed0;
@@ -106,7 +107,12 @@
 
     .docs-sheet-tab-name:hover
     {
-        background: var(--tab-hover-gradient)!important;
+        background: var(--tab-hover-gradient);
+    }
+    
+     .docs-sheet-tab-hover.docs-sheet-active-tab  .docs-sheet-tab-name
+    {
+        background: var(--tab-hover-gradient-dark)!important;
     }
     div[role=navigation] {
         position: absolute;
